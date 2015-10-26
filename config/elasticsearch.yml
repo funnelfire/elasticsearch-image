@@ -1,0 +1,60 @@
+#cluster.name: elasticsearch
+
+node.name: "${hostname}"
+
+# Allow this node to be eligible as a master node (enabled by default):
+#
+#node.master: true
+
+# Allow this node to store data (enabled by default):
+#
+#node.data: true
+
+# Elasticsearch performs poorly when JVM starts swapping: you should ensure that it _never_ swaps.
+# Set this property to true to lock the memory:
+#
+bootstrap.mlockall: true
+
+# Set to ensure a node sees N other master eligible nodes to be considered
+# operational within the cluster. Its recommended to set it to a higher value
+# than 1 when running more than 2 nodes in the cluster.
+#
+discovery.zen.minimum_master_nodes: 2
+
+# Unicast discovery allows to explicitly control which nodes will be used
+# to discover the cluster. It can be used when multicast is not present,
+# or to restrict the cluster communication-wise.
+#
+# 1. Disable multicast discovery (enabled by default):
+#
+#discovery.zen.ping.multicast.enabled: false
+#
+# 2. Configure an initial list of master nodes in the cluster
+#    to perform discovery when new nodes (master or data) are started:
+#
+#discovery.zen.ping.unicast.hosts: ["172.18.0.17", "172.18.0.15", "172.18.0.9"]
+
+# Shard level query and fetch threshold logging.
+
+#index.search.slowlog.threshold.query.warn: 10s
+index.search.slowlog.threshold.query.info: 5s
+#index.search.slowlog.threshold.query.debug: 2s
+#index.search.slowlog.threshold.query.trace: 500ms
+
+#index.search.slowlog.threshold.fetch.warn: 1s
+#index.search.slowlog.threshold.fetch.info: 800ms
+#index.search.slowlog.threshold.fetch.debug: 500ms
+#index.search.slowlog.threshold.fetch.trace: 200ms
+
+#index.indexing.slowlog.threshold.index.warn: 10s
+#index.indexing.slowlog.threshold.index.info: 5s
+#index.indexing.slowlog.threshold.index.debug: 2s
+#index.indexing.slowlog.threshold.index.trace: 500ms
+
+index.merge.scheduler.max_thread_count: 1
+indices.store.throttle.max_bytes_per_sec: 50mb
+action.auto_create_index: false
+script.disable_dynamic: false
+
+threadpool.search.queue_size: 10000
+indices.breaker.fielddata.limit: 30%
