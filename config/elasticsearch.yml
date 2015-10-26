@@ -1,6 +1,6 @@
 #cluster.name: elasticsearch
 
-node.name: "${hostname}"
+node.name: "${nodename}"
 
 # Allow this node to be eligible as a master node (enabled by default):
 #
