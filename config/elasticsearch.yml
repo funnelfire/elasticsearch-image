@@ -1,4 +1,4 @@
-#cluster.name: elasticsearch
+cluster.name: funnelfire
 
 node.name: "${nodename}"
 
@@ -32,7 +32,7 @@ discovery.zen.minimum_master_nodes: 2
 # 2. Configure an initial list of master nodes in the cluster
 #    to perform discovery when new nodes (master or data) are started:
 #
-discovery.zen.ping.unicast.hosts: ["137.116.71.63:9300","ffazva-es.cloudapp.net:9301","ffazva-es.cloudapp.net:9302","ffazva-es.cloudapp.net:9303"]
+#discovery.zen.ping.unicast.hosts: ["137.116.71.63:9300","ffazva-es.cloudapp.net:9301","ffazva-es.cloudapp.net:9302","ffazva-es.cloudapp.net:9303"]
 
 # Shard level query and fetch threshold logging.
 
