@@ -27,12 +27,12 @@ discovery.zen.minimum_master_nodes: 2
 #
 # 1. Disable multicast discovery (enabled by default):
 #
-#discovery.zen.ping.multicast.enabled: false
+discovery.zen.ping.multicast.enabled: false
 #
 # 2. Configure an initial list of master nodes in the cluster
 #    to perform discovery when new nodes (master or data) are started:
 #
-#discovery.zen.ping.unicast.hosts: ["137.116.71.63:9300","ffazva-es.cloudapp.net:9301","ffazva-es.cloudapp.net:9302","ffazva-es.cloudapp.net:9303"]
+discovery.zen.ping.unicast.hosts: ["es-feed-01","es-feed-02","es-misc-01","es-misc-02","es-misc-03"]
 
 # Shard level query and fetch threshold logging.
 
