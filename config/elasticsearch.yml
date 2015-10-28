@@ -53,7 +53,7 @@ index.search.slowlog.threshold.query.info: 5s
 
 index.merge.scheduler.max_thread_count: 1
 indices.store.throttle.max_bytes_per_sec: 50mb
-action.auto_create_index: false
+action.auto_create_index: +.*, -*
 script.disable_dynamic: false
 
 threadpool.search.queue_size: 10000
