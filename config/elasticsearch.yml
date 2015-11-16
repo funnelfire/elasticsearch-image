@@ -32,7 +32,7 @@ discovery.zen.ping.multicast.enabled: false
 # 2. Configure an initial list of master nodes in the cluster
 #    to perform discovery when new nodes (master or data) are started:
 #
-discovery.zen.ping.unicast.hosts: ["es-feed-01","es-feed-02","es-misc-01","es-misc-02","es-misc-03"]
+discovery.zen.ping.unicast.hosts: ["es-feed-01","es-feed-02","es-feed-03","es-misc-01","es-misc-02","es-misc-03"]
 
 # Shard level query and fetch threshold logging.
 
